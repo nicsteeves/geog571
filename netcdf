@@ -1,0 +1,17 @@
+# required libraries
+import csv                      #for file reading
+import numpy as np              # for arraysimport matplotlib
+import matplotlib.pylab as plt  # for plotting
+
+import pandas as pd
+from pandas import DataFrame
+import datetime as dt
+import netCDF4
+from netCDF4 import Dataset
+
+filename = '/Users/Nicky/Documents/isfs.nc'
+f = netCDF4.Dataset(filename, 'r')
+
+for v in f.variables:
+    print(v)
+    
